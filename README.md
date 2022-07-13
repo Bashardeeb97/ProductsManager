@@ -27,19 +27,19 @@
   which have to inherit the abstract class Product.
   
 - Cheese : - requires a minimum quality level of 30 in order to be to be placed on the shelf,
-             or is removed as soon as its quality falls below 30.
+             or is removed as soon as its quality falls below 30.<br />
            - has an expiration date that
              between 50 and 100 days in the
-             in the future.
+             in the future.<br />
            - loses one quality point
-             every day.
-           - Cheese has a daily Price
+             every day.<br />
+           - Cheese has a daily Price<br />
            
-- Wine     - any non negative quality level is accepted
+- Wine     - any non negative quality level is accepted<br />
            - Wine does not lose quality, but gains
              every 10 days one quality point 
-             until the quality has reached 50.
-           - Wine does not expire
+             until the quality has reached 50.<br />
+           - Wine does not expire<br />
            - Wines do not change their price once they have been
              placed on the shelf       
   
