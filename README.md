@@ -22,7 +22,7 @@
 
 *******Product types & their processing rules******* 
 
-- This application support three Product types : Wine, Cheese.
+- This application support two Product types : Wine, Cheese.
 - Adding new product types can be done simply by creating new classes in product_types folder  
   which have to inherit the abstract class Product.
   
