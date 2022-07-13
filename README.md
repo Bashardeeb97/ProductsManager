@@ -26,7 +26,7 @@
 - Adding new product types can be done simply by creating new classes in product_types folder  
   which have to inherit the abstract class Product.
   
-   *******Cheese*******
+*******Cheese*******
 - requires a minimum quality level of 30 in order to be to be placed on the shelf,<br />
 or is removed as soon as its quality falls below 30.<br />
 - has an expiration date that
@@ -39,11 +39,11 @@ every day.<br />
  *******Wine*******
  
 - any non negative quality level is accepted<br />
-- Wine does not lose quality, but gains
+- does not lose quality, but gains
 every 10 days one quality point 
 until the quality has reached 50.<br />
-- Wine does not expire<br />
-- Wines do not change their price once they have been
+- does not expire<br />
+- does not change their price once they have been
 placed on the shelf       
   
 More Infos :
