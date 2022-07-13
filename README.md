@@ -10,8 +10,8 @@
 - This application uses the processing rules of products types and values of every product
   to help the store workers in two ways :
   
-  1- Determining if new product can be placed on the shleves or not.
-  2- Showing the updated values of products for the next days and 
+- 1- Determining if new product can be placed on the shleves or not.
+- 2- Showing the updated values of products for the next days and 
      determining which products have to be taken off from the shelves.
  
 
