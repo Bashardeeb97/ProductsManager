@@ -15,12 +15,12 @@
      determining which products have to be taken off from the shelves.
  
 
-----------------General Processing rules----------------
+*******General Processing rules*******
 
 - Each product has a fixed, not variable basic price.
 - The daily price is determined using this formula : Basic price + 0,1€ * Quality
 
--------------------Product types & their processing rules------------------------ 
+*******Product types & their processing rules******* 
 
 - This application support three Product types : Wine, Cheese.
 - Adding new product types can be done simply by creating new classes in product_types folder  
