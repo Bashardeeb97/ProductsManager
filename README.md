@@ -26,7 +26,7 @@
 - Adding new product types can be done simply by creating new classes in product_types folder  
   which have to inherit the abstract class Product.
   
-- Cheese : - requires a minimum quality level of 30 in order to be to be placed on the shelf,
+- Cheese : - requires a minimum quality level of 30 in order to be to be placed on the shelf,<br />
              or is removed as soon as its quality falls below 30.<br />
            - has an expiration date that
              between 50 and 100 days in the
