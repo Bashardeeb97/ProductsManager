@@ -370,21 +370,22 @@ public class ProductsManager {
 
             Connection connection = DriverManager.getConnection("jdbc:sqlite:src/com/example/productsmanager/saved_products/products.db");
             Statement statement = connection.createStatement();
+            statement.execute("DROP TABLE IF EXISTS productsINFOS ");
             statement.execute("CREATE TABLE IF NOT EXISTS productsINFOS " +
-                    "(name TEXT," +
-                    "basicPrice TEXT," +
-                    "qualityScore TEXT," +
-                    "expiryDate TEXT," +
-                    "lastTimeStateUpdated TEXT," +
-                    "firstDay_OnTheShelf TEXT," +
-                    "productType TEXT)");
+                    "(name VARCHAR(250) NOT NULL PRIMARY KEY," +
+                    "basicPrice float(9,2) NOT NULL," +
+                    "qualityScore INT(255) ," +
+                    "expiryDate VARCHAR(250) ," +
+                    "lastTimeStateUpdated VARCHAR(250) NOT NULL," +
+                    "firstDay_OnTheShelf VARCHAR(250) NOT NULL," +
+                    "productType VARCHAR(250) NOT NULL)");
 
             Product.setNumberOfDaysInFuture(0);
 
             productsSet.stream().
                     forEach(product -> {
                         product.updateProductState();
-                        String values = String.format("VALUES('%s','%s','%s','%s','%s','%s','%s')",
+                        String values = String.format("VALUES('%s','%f','%o','%s','%s','%s','%s')",
                                 product.getName(),
                                 product.getBasicPrice(),
                                 product.getQualityScore(),
@@ -393,10 +394,13 @@ public class ProductsManager {
                                 product.getFirstDayOnTheShelf(),
                                 product.getClass().getSimpleName());
                         try {
+
                             statement.execute("INSERT INTO productsINFOS " +
                                     values);
+
                         } catch (SQLException throwables) {
-                            throwables.printStackTrace();
+
+                            // The product already exists in the productsINFOS table.
                         }
 
                     });
